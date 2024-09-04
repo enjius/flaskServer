@@ -1,10 +1,9 @@
-import tvscreener as tvs
-from tvscreener import CryptoField, TimeInterval
-from tvscreener.filter import FilterOperator
-from tvscreener import ExtraFilter
-from tvscreener.field import Exchange, SubMarket, SymbolType
-
 import os
+
+import tvscreener as tvs
+from tvscreener import CryptoField, ExtraFilter, TimeInterval
+from tvscreener.field import Exchange, SubMarket, SymbolType
+from tvscreener.filter import FilterOperator
 
 print("ddddd");
 ss = tvs.CryptoScreener()
@@ -17,11 +16,7 @@ df = ss.get()
 print(df)
 
 
-result_filename = os.getenv("RESULT_FILENAME")
 
-
-with open(result_filename, "w") as f:
-    f.write(str(df))
 
 
 
